@@ -1,0 +1,15 @@
+apiVersion: v1
+
+kind: Service
+
+metadata:
+  name: mydb-svc
+
+spec:
+  selector:
+    name: mysqldb
+  type: ClusterIP
+  ports:
+  - name: mysqldb-svc-port
+    port: 3306
+    targetPort: 3306
